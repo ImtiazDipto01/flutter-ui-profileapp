@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyAppRow());
+  runApp(MyTask());
 }
 
 class MyAppColumn extends StatelessWidget {
@@ -97,6 +97,82 @@ class MyAppRow extends StatelessWidget {
                 // and use this after column : crossAxisAlignment: CrossAxisAlignment.end
                 width: double.infinity,
               )*/
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class MyTask extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.teal,
+        body: SafeArea(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Container(
+                width: 100.0,
+                color: Colors.red,
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Container(
+                    width: 100.0,
+                    height: 100.0,
+                    color: Colors.white,
+                  ),
+                  Container(
+                    width: 100.0,
+                    height: 100.0,
+                    color: Colors.red,
+                  ),
+                ],
+              ),
+              Container(
+                width: 100.0,
+                color: Colors.blue,
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class MyRow extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.teal,
+        body: SafeArea(
+          child: Stack(
+            children: <Widget>[
+              Positioned(
+                top: 5,
+                left: 5,
+                child: Container(
+                  width: 100.0,
+                  height: 100.0,
+                  color: Colors.red,
+                ),
+              ),
+              Positioned(
+                top: 5,
+                right: 5,
+                child: Container(
+                  width: 100.0,
+                  height: 100.0,
+                  color: Colors.blue,
+                ),
+              ),
             ],
           ),
         ),
